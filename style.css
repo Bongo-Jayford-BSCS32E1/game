@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#gameContainer {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+}
+
+.tile {
+    float: left;
+    border: 1px solid #000;
+}
+
+.player {
+    background-color: blue;
+}
+.player {
+    background-color: blue;
+    border: 2px solid yellow;
+    border-radius: 50%; /* Makes the player circular */
+    transition: transform 0.2s; /* Smooth transition for movement */
+}
+
+.enemy {
+    background-color: red;
+    border: 2px solid black;
+    border-radius: 10%; /* Slightly rounded corners for the enemy */
+    animation: enemyAnimation 1.5s infinite; /* Animation for the enemy */
+}
+
+/* Simple animation for the enemy - you can customize this */
+@keyframes enemyAnimation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Enemy moves up and down */
+    }
+}
